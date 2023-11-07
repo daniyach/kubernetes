@@ -8,9 +8,9 @@ spec:
     image: nginx:alpine
     env:                                  # environment variables
     - name: MI_VARIABLE
-      value: "pelado"
+      value: "yach"
     - name: MI_OTRA_VARIABLE
-      value: "pelade"
+      value: "otroyach"
     - name: DD_AGENT_HOST                 # Creamos una variable de entorno con ese nombre
       valueFrom:
         fieldRef:
