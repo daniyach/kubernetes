@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: template-frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchlabels:
+      app: template-frontend
+  template:
+    metadata:
+      labels:
+        app: template-frontend
+    spec:
+      containers:
+      - name: template-frontend
+        image: template-aiprism:latest      # Agregar la ruta o la dirección del dockerfile
+        ports:
+          - containerPort: 8082
