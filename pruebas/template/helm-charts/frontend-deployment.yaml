@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: template-frontend-deployment
+  labels:
+    app: template-frontend
 spec:
   replicas: 1
   selector:
@@ -14,6 +16,7 @@ spec:
     spec:
       containers:
       - name: template-frontend
-        image: template-aiprism:latest      # Agregar la ruta o la dirección del dockerfile
+        imagePullPolicy: Never              # Kubelet intentará obtener la imagen localmente de alguna manera, de lo contrario el inicio fallará
+        image: template-aiprism:0.1      # Agregar la ruta o la dirección del dockerfile
         ports:
-          - containerPort: 8082
+          - containerPort: 80

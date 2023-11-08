@@ -1,0 +1,11 @@
+# CREA UN NAMESAPCE DONDE SE EJECUTARA EL CONTROLADOR
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nginx-ingress
+---
+apiVersion: v1
+kind: ServiceAccount    # Para darle los permisos
+metadata:
+  name: nginx-ingress
+  namespace: nginx-ingress
