@@ -1,8 +1,0 @@
-apiVersion: v1 # Es la versión de la API de este recurso de kubernetes, hay que fijarse en la documentación de kuebernetes que API versión usa el type Pod (en este caso).
-kind: Pod
-metadata: # add labels or names
-    name: nginx
-spec:
-    containers: # all containers in the same pod have the same ip
-      - name: nginx
-        image: nginx:alpine
